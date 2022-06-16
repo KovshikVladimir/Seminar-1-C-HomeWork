@@ -63,9 +63,14 @@ int number = Typein("Введите цифру: ");
 int firstNumber = number / 100;
 int thirdNumber = number % 10;
 
-int secondNumber = (number - (firstNumber * 100 + thirdNumber))/10;
+int secondNumber = Formula(number);
 
 Console.WriteLine("Второе число: "+secondNumber);
+
+int Formula(int number)
+{
+    return (number - (firstNumber * 100 + thirdNumber))/10;
+}
 
 int Typein(string output)
 {
