@@ -43,37 +43,55 @@
 // }
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+int number = Typein("Введите цифру: ");
+int count = 0;
+int result = 1;
+int crate = 0;
+crate = number + crate;
+if (number / 100 == 0)
+{
+    Console.WriteLine("Третьей цифры нет");
+}
+else
+{
+    while (crate >= 1)
+    {
+        crate = crate / 10;
+        count = count + 1;
+    }
+    result = ThirdNumber(number, count);
+    Console.WriteLine($"Третья цифра числа: "+ (result));
+    Console.WriteLine($"Общее число цифр: "+ (count));
+}
+int ThirdNumber(int a, int b)
+{
+    b = b - 3;
+    int stepen = Convert.ToInt32(Math.Pow(10, b));
+    return a = (a / stepen) % 10;
+}
+int Typein(string output)
+{
+    Console.Write(output);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 // int number = Typein("Введите цифру: ");
 
+// int firstNumber = number / 100;
 // int thirdNumber = number % 10;
 
-// Console.WriteLine(thirdNumber);
+// int secondNumber = Formula(number);
 
+// Console.WriteLine("Второе число: "+secondNumber);
+
+// int Formula(int number)
+// {
+//     return (number - (firstNumber * 100 + thirdNumber))/10;
+// }
 
 // int Typein(string output)
 // {
 //     Console.Write(output);
 //     return Convert.ToInt32(Console.ReadLine());
 // }
-// Работает только для 3-х значных, нужен массив (возможно)
-
-//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-int number = Typein("Введите цифру: ");
-
-int firstNumber = number / 100;
-int thirdNumber = number % 10;
-
-int secondNumber = Formula(number);
-
-Console.WriteLine("Второе число: "+secondNumber);
-
-int Formula(int number)
-{
-    return (number - (firstNumber * 100 + thirdNumber))/10;
-}
-
-int Typein(string output)
-{
-    Console.Write(output);
-    return Convert.ToInt32(Console.ReadLine());
-}
