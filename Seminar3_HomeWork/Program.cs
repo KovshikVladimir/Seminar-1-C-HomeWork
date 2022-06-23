@@ -16,7 +16,7 @@
 //     return a * a * a;
 // }
 
-//Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// //Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
 // Console.Clear();
 // int x1 = Input("Введите первую координату:");
@@ -38,23 +38,23 @@
 // Console.WriteLine($"Расстояние от А до B = {length}");
 // Console.WriteLine($"Расстояние от А до B (целое) = {length2}");
 
-//Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-Console.Clear();
-int number = Input("Введите число: _");
+// //Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// Console.Clear();
+// int number = Input("Введите число: _");
 
-int firstNumber = number / 10000;
-int secondNumber = (number / 1000) % 10;
-int fourthNumber = (number % 100) / 10;
-int fifthNumber = number % 10;
+// int firstNumber = number / 10000;
+// int secondNumber = (number / 1000) % 10;
+// int fourthNumber = (number % 100) / 10;
+// int fifthNumber = number % 10;
 
-if (firstNumber == fifthNumber && secondNumber == fourthNumber)
-{
-    Console.WriteLine("Число является палиндромом");
-}
-else
-{
-    Console.WriteLine("Число не является палиндромом");
-}
+// if (firstNumber == fifthNumber && secondNumber == fourthNumber)
+// {
+//     Console.WriteLine("Число является палиндромом");
+// }
+// else
+// {
+//     Console.WriteLine("Число не является палиндромом");
+// }
 
 
 
@@ -62,13 +62,13 @@ else
 
 // Методы
 
-int Pow(int a)
-{
-    return a * a;
-}
+// int Pow(int a)
+// {
+//     return a * a;
+// }
 
-int Input(string output)
-{
-    Console.WriteLine(output);
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int Input(string output)
+// {
+//     Console.WriteLine(output);
+//     return Convert.ToInt32(Console.ReadLine());
+// }

@@ -30,14 +30,15 @@
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран. Вывод сделать отдельным методом.
 
-int[] array = new int[8];
-Console.Write("[ ");
-for (int digit = 0; digit < array.Length; digit++)
-{
-    array[digit] = new Random().Next(0, 10);
-    PrintArray(array[digit]);
-}  
-Console.Write("]");
+// int[] array = new int[8];
+// int[] array = {1,2,3,4,5,6,7,8};
+// Console.Write("[ ");
+// for (int digit = 0; digit < array.Length; digit++)
+// {
+//     // array[digit] = new Random().Next(0, 10);
+//     PrintArray(array[digit]);
+// }  
+// Console.Write("]");
 
 
 
@@ -45,11 +46,11 @@ Console.Write("]");
 
 
 
-int PrintArray(int array)
-{
-    Console.Write(array + " ");
-    return array;
-}
+// int PrintArray(int array)
+// {
+//     Console.Write(array + " ");
+//     return array;
+// }
 
 
 
