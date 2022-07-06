@@ -15,6 +15,18 @@ void PrintMatrix(int[,] array)
         Console.WriteLine();
     }
 }
+void PrintMatrixDouble(double[,] array)
+{
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
 void FillMatrix(int[,] matrix)
 {
     for (int k = 0; k < matrix.GetLength(0); k++)
@@ -22,6 +34,17 @@ void FillMatrix(int[,] matrix)
         for (int f = 0; f < matrix.GetLength(1); f++)
         {
             matrix[k, f] = new Random().Next(1, 4);
+        }
+    }
+
+}
+void FillMatrixDouble(double[,] matrix)
+{
+    for (int k = 0; k < matrix.GetLength(0); k++)
+    {
+        for (int f = 0; f < matrix.GetLength(1); f++)
+        {
+            matrix[k, f] = Convert.ToDouble(new Random().Next(10, 100))/10;
         }
     }
 
@@ -84,10 +107,10 @@ void FillMatrix(int[,] matrix)
 // int m = Input("Введите m:");
 // int n = Input("Введите n:");
 
-// int[,] numbers = new int[m, n];
+// double[,] numbers = new double[m, n];
 
-// FillMatrix(numbers);
-// PrintMatrix(numbers);
+// FillMatrixDouble(numbers);
+// PrintMatrixDouble(numbers);
 
 // Задача 50: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
 // и возвращает значение этого элемента или же указание, что такого элемента нет.
@@ -124,30 +147,29 @@ void FillMatrix(int[,] matrix)
 
 // }
 
-
 // Задача 52: Задайте двумерный массив из целых чисел. 
 // Найдите среднее арифметическое элементов в каждом столбце.
 
-int[,] arrayDouble = new int[5, 5];
-FillMatrix(arrayDouble);
-PrintMatrix(arrayDouble);
-int y = 0;
-int sum = 0;
-int average = 1;
+// int[,] arrayDouble = new int[5, 5];
+// FillMatrix(arrayDouble);
+// PrintMatrix(arrayDouble);
+// int y = 0;
+// int sum = 0;
+// int average = 1;
 
-for (int i = 0; i < arrayDouble.GetLength(1); i++)
-{
-    y = 0;
-    sum = 0;
-    average = 1;
-    while (y < arrayDouble.GetLength(0))
-    {
-        sum += arrayDouble[y, i];
-        y++;
-    }
-    average = sum / arrayDouble.GetLength(0);
-    Console.WriteLine($"Среднее арифметическое {i+1} столбца: " + average);
-}
+// for (int i = 0; i < arrayDouble.GetLength(1); i++)
+// {
+//     y = 0;
+//     sum = 0;
+//     average = 1;
+//     while (y < arrayDouble.GetLength(0))
+//     {
+//         sum += arrayDouble[y, i];
+//         y++;
+//     }
+//     average = sum / arrayDouble.GetLength(0);
+//     Console.WriteLine($"Среднее арифметическое {i+1} столбца: " + average);
+// }
 
 
 
